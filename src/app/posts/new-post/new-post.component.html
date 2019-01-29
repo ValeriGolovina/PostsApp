@@ -1,0 +1,49 @@
+<form action="post" (submit)="onFormSubmit($event)">
+  <div class="dx-fieldset">
+    <h1 class="title">New Post</h1>
+    <div class="dx-field">
+      <div class="dx-field-label">Title</div>
+      <div class="dx-field-value">
+        <dx-text-box [(value)]="title">
+          <dx-validator>
+            <dxi-validation-rule type="required" message="Title is required"></dxi-validation-rule>
+            <dxi-validation-rule type="stringLength" [min]="2" message="Title must have at least 2 symbols"></dxi-validation-rule>
+          </dx-validator>
+        </dx-text-box>
+      </div>
+    </div>
+    <div class="dx-field">
+      <div class="dx-field-label">Description</div>
+      <div class="dx-field-value">
+        <dx-text-area
+          [height]="90"
+          [(value)]="description">
+          <dx-validator>
+            <dxi-validation-rule type="required" message="Description is required"></dxi-validation-rule>
+            <dxi-validation-rule type="stringLength" [min]="2" message="Description must have at least 2 symbols"></dxi-validation-rule>
+          </dx-validator>
+        </dx-text-area>
+      </div>
+    </div>
+    <div class="dx-field">
+      <div class="dx-field-label">User Id</div>
+      <div class="dx-field-value">
+        <dx-text-box [(value)]="userId">
+          <dx-validator>
+            <dxi-validation-rule type="required" message="User Id is required"></dxi-validation-rule>
+            <dxi-validation-rule type="numeric" message="There should be a number"></dxi-validation-rule>
+          </dx-validator>
+        </dx-text-box>
+      </div>
+    </div>
+  </div>
+  <div class="dx-fieldset">
+    <dx-validation-summary id="summary"></dx-validation-summary>
+    <dx-button
+      id="button"
+      text="Add Post"
+      type="success"
+      [useSubmitBehavior]="true">
+    </dx-button>
+  </div>
+</form>

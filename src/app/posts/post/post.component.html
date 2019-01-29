@@ -1,0 +1,18 @@
+<div class="content"> <!--*ngIf="(post$ | async) as post; else loading">-->
+  <h1 class="content__title">{{ post.title }}</h1>
+  <p class="content__body">{{ post.body }}</p>
+  <p class="content__date">{{ currDate | date }}</p>
+<dx-button
+  class="comments-but"
+  text="Show Comments"
+  type="submit"
+  (onClick)="showComments()">
+</dx-button>
+<dx-button
+  class="add-but"
+  text="Edit post"
+  type="submit"
+  (onClick)="editPost()">
+</dx-button>
+</div>
+<router-outlet></router-outlet>

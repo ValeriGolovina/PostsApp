@@ -1,0 +1,13 @@
+<div class="content comments">
+  <h1>Comments</h1>
+  <div class="comment-content" *ngFor="let comment of comments ">
+    <hr>
+    <b><h3 class="comment-content__email">{{ comment.email }}</h3></b>
+    <p class="comment-content__body">{{ comment.body }}</p>
+  </div>
+  <dx-button
+    text="Show Next Comments"
+    type="success"
+    (onClick)="loadNextComments()">
+  </dx-button>
+</div>

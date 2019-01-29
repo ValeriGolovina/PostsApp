@@ -1,0 +1,13 @@
+<div class="user-content" *ngIf="(user$ | async) as user; else loading">
+  <h1 class="user-content__title">Full info about {{ user.username }}</h1>
+  <p class="user-content__name"><b>Full Name:</b> {{ user.name }}</p>
+  <p class="user-content__email"><b>Email:</b> {{ user.email }}</p>
+  <p class="user-content__adress"><b>Adress:</b> {{ user.address.city }}, {{ user.address.street }}</p>
+  <p class="user-content__phone">Phone: {{ user.phone }}</p>
+  <p class="user-content__website">Website: {{ user.website }}</p>
+  <div class="user-content__company"><h2><b>Company</b></h2>
+    <p class="user-content__company-name"><b>Name: </b>{{ user.company.name }}</p>
+    <p class="user-content__company-phrase"><b>Phrase: </b>{{ user.company.catchPhrase }}</p>
+  </div>
+</div>
+

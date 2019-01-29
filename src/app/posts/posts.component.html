@@ -1,0 +1,19 @@
+<div class="add-but">
+  <dx-button
+    class="add-but"
+    text="Add new post"
+    type="submit"
+    (onClick)="addNew()">
+  </dx-button>
+</div>
+<div class="get-all-but">
+  <dx-button
+    text="Get all posts"
+    type="success"
+    [disabled]="posts.length !== 0"
+    (onClick)="getAllPosts()">
+  </dx-button>
+</div>
+<app-data-grid [arr]="posts" [fields]="['userId', 'title', 'body' ]" [type]="'post'"></app-data-grid>
+<app-filter-fields ></app-filter-fields>
+

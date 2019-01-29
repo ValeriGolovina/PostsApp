@@ -1,0 +1,8 @@
+<section *ngIf="arr.length!=0">
+<dx-data-grid id="gridContainer" [dataSource]="arr" [showBorders]="true"
+              [columns] = fields
+              (onRowClick)="openDetails($event)"
+>
+</dx-data-grid>
+
+</section>

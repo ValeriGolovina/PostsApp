@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: Arial;
+  font-size: 18px;
+  color: dimgrey;
+}
+a{
+  text-decoration: none;
+  color: grey;
+
+  &:hover {
+    color: burlywood;
+  }
+}
+li {
+  list-style: none;
+}
+h1 {
+    color: burlywood;
+    text-align: center;
+    margin-bottom: 8%;
+}
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}

@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  margin-bottom: 8%;
+
+  &__item {
+    padding: 5px 10px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
